@@ -1,0 +1,73 @@
+body {
+  background: whitesmoke;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 15px 0 35px 0;
+  font-weight: 600;
+  background: #91877b;
+}
+
+.divider {
+  height: 2px;
+  background: #2d2d2d;
+  /* background: orangered; */
+  margin-bottom: 40px;
+}
+li.list-group-item {
+  background: aliceblue;
+}
+/* li:nth-child(even) {
+  background: mintcream;
+}
+
+li:nth-child(odd) {
+  background: aliceblue;
+} */
+.input-group {
+  width: 100%;
+}
+
+.input-group.with-button {
+  width: 100%;
+}
+
+.simple {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.content {
+  margin: 0 20px 0 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 75%;
+    margin: 0 20px 0 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .content {
+    width: 63%;
+    margin: 0 20px 0 20px;
+  }
+}
+
+h1.otto {
+  color: white;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
