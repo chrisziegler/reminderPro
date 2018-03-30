@@ -10,8 +10,10 @@ body {
   text-align: center;
   font-size: 1.5em;
   padding: 15px 0 35px 0;
-  font-weight: 600;
-  background: #91877b;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
+  height: 80px;
+  background-color: #91877b;
 }
 
 .divider {
@@ -20,16 +22,18 @@ body {
   /* background: orangered; */
   margin-bottom: 40px;
 }
+
 li.list-group-item {
-  background: aliceblue;
+  background: #b6d1eb;
 }
-/* li:nth-child(even) {
-  background: mintcream;
+li:nth-child(even) {
+  background: silver;
 }
 
-li:nth-child(odd) {
+/* li:nth-child(odd) {
   background: aliceblue;
-} */
+}  */
+
 .input-group {
   width: 100%;
 }
@@ -53,6 +57,10 @@ li:nth-child(odd) {
   .content {
     width: 75%;
     margin: 0 20px 0 20px;
+  }
+  .title {
+    background-image: url('./todo-notes-banner.png');
+    background-repeat: no-repeat;
   }
 }
 

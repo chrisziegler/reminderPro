@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // makes these available to mapDispatchToProps, so available on this.props
-import { addReminder, deleteReminder } from '../actions';
+import { addReminder, deleteReminder, clearReminders } from '../actions';
 import moment from 'moment';
 
 class App extends Component {
@@ -34,10 +34,33 @@ class App extends Component {
     });
   };
 
+  clearReminders = () => {
+    this.props.clearReminders();
+  };
+
   renderReminders = () => {
     const { reminders } = this.props;
     return (
-      <ul className="list-group" style={{ fontSize: '1.4em', marginTop: 15 }}>
+      <ul className="list-group" style={{ fontSize: '1.1em', marginTop: 15 }}>
+        {reminders.length > 1 && (
+          <li
+            key="clear"
+            className="list-group-item"
+            style={{ paddingBottom: 23, paddingRight: 32 }}
+          >
+            <span
+              className="badge"
+              style={{
+                backgroundColor: 'white',
+                cursor: 'pointer',
+                color: 'red'
+              }}
+              onClick={this.clearReminders}
+            >
+              clear all
+            </span>
+          </li>
+        )}
         {reminders.map(reminder => (
           <li key={reminder.id} className="list-group-item">
             <div className="list-group-item">
@@ -98,7 +121,7 @@ class App extends Component {
             />
             <span className="input-group-btn">
               <button
-                className="btn btn-primary"
+                className="btn btn-default"
                 type="button"
                 style={{ marginLeft: 4 }}
                 onClick={this.addReminder}
@@ -128,4 +151,8 @@ function mapStateToProps(state) {
 // }
 
 // first argument null/mapStateToProps
-export default connect(mapStateToProps, { addReminder, deleteReminder })(App);
+export default connect(mapStateToProps, {
+  addReminder,
+  deleteReminder,
+  clearReminders
+})(App);
