@@ -41,7 +41,7 @@ class App extends Component {
   renderReminders = () => {
     const { reminders } = this.props;
     return (
-      <ul className="list-group" style={{ fontSize: '1.1em', marginTop: 15 }}>
+      <ul className="list-group" style={{ fontSize: '1.6rem', marginTop: 15 }}>
         {reminders.length > 1 && (
           <li
             key="clear"
@@ -63,7 +63,7 @@ class App extends Component {
         )}
         {reminders.map(reminder => (
           <li key={reminder.id} className="list-group-item">
-            <div className="list-group-item">
+            <div className="list-group-item fontscale">
               {reminder.text}
 
               <span
@@ -121,7 +121,8 @@ class App extends Component {
             />
             <span className="input-group-btn">
               <button
-                className="btn btn-default"
+                className="btn btn-warning
+                "
                 type="button"
                 style={{ marginLeft: 4 }}
                 onClick={this.addReminder}
